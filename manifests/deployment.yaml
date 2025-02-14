@@ -14,7 +14,7 @@ spec:
         app: customer2es-app1
     spec:
       containers:
-      - name: producer-container
+      - name: consumer-container
         image: mmregistry.mmvietnam.com:5000/customer2es:latest
         ports:
         - containerPort: 7001
