@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customer2es-app1
-  namespace: customer2es
+  #namespace: customer2es
 spec:
   replicas: 1
   selector:
