@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customer2es-app1
-  #namespace: customer2es
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -20,7 +20,7 @@ spec:
         - containerPort: 7001
         env:
         - name: NODE_ENV
-          value: "UAT"
+          value: "PROD"
         - name: SERVICE
           value: "consumer"
       imagePullSecrets:
