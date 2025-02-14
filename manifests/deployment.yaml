@@ -20,7 +20,7 @@ spec:
         - containerPort: 7001
         env:
         - name: NODE_ENV
-          value: "PROD"
+          value: "UAT"
         - name: SERVICE
           value: "consumer"
       imagePullSecrets:
