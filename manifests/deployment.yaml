@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer2es-app1
+  namespace: customer2es
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customer2es-app1
+  template:
+    metadata:
+      labels:
+        app: customer2es-app1
+    spec:
+      containers:
+      - name: producer-container
+        image: mmregistry.mmvietnam.com:5000/customer2es:latest
+        ports:
+        - containerPort: 7001
+        env:
+        - name: NODE_ENV
+          value: "PROD"
+        - name: SERVICE
+          value: "consumer"
+      imagePullSecrets:
+      - name: mmregistry-secret
+
