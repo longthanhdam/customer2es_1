@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: consumer-container
-        image: mmregistry.mmvietnam.com:5000/customer2es:latest
+        image: mmregistry.mmvietnam.com:5000/customer2es:v1.0.21
         ports:
         - containerPort: 7001
         env:
